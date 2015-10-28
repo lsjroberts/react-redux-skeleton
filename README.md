@@ -19,7 +19,7 @@ $ npm start
 
 ## Examples
 
-The skeleton comes with two examples:
+The skeleton comes with some examples of routing and components:
 
 1. Counter (demonstrating basic redux usage)
 2. Current converter (more complex data and asynchronous actions with an API middleware)
@@ -27,7 +27,7 @@ The skeleton comes with two examples:
 To clean out these examples and start from scratch run:
 
 ```
-$ npm run scratch
+$ ./bin/clean
 ```
 
 

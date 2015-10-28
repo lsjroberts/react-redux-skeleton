@@ -10,6 +10,12 @@ export class Header extends Component {
     return (
       <header className={ styles.bright }>
         <h1>React Redux Skeleton</h1>
+        <nav>
+          <ul>
+            <li><Link to='/'>Home</Link></li>
+            <li><Link to='/example'>Example Route</Link></li>
+          </ul>
+        </nav>
       </header>
     );
   }

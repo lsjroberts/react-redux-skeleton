@@ -25,6 +25,7 @@ module.exports = {
       // Allows `import example from 'components/example';`
       'components': path.join(__dirname, 'shared/components'),
       'containers': path.join(__dirname, 'shared/containers'),
+      'routes': path.join(__dirname, 'routes'),
 
       // Allows sass importing: `@import '~styles/mixins/example';`
       'styles': path.join(__dirname, 'assets/styles'),
