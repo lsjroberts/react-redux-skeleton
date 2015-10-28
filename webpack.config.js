@@ -40,7 +40,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel?stage=2',
+        loader: 'babel?stage=0',
         include: __dirname
       },
       {
