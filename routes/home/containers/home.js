@@ -5,17 +5,30 @@ import { Wrapper } from 'components/wrapper';
 import { Counter } from 'components/counter';
 import { Currency } from 'components/currency';
 
+import { increment, decrement } from 'modules/counter/actions';
+import { setAmount, setCurrency, fetchRatesIfNeeded } from 'modules/currency/actions';
+
 export class Home extends Component {
+  componentDidMount() {
+    this.props.dispatch(fetchRatesIfNeeded(['GBP', 'USD', 'EUR']))
+  }
+
+  handleChangeAmount(e) {
+    this.props.dispatch(setAmount(e.target.value));
+  }
+
+  handleChangeCurrency(e) {
+    this.props.dispatch(setCurrency(e.target.value));
+  }
+
   render() {
-    const { state } = this.props;
-    const { increment, decrement } = this.props.actions.counter;
-    const { changeAmount } = this.props.actions.currency;
+    const { state, dispatch } = this.props;
 
     const counter = (
       <Counter
         count={ state.counter }
-        increment={ () => increment() }
-        decrement={ () => decrement() }
+        increment={ () => dispatch(increment()) }
+        decrement={ () => dispatch(decrement()) }
       />
     );
 
@@ -34,9 +47,9 @@ export class Home extends Component {
             calls to update your redux store.
           </p>
           <Currency
-            amount={ state.currency.amount }
-            converted={ state.currency.converted }
-            onChange={ (e) => changeAmount(e.target.value) }
+            state={ state.currency }
+            onChangeAmount={ ::this.handleChangeAmount }
+            onChangeCurrency={ ::this.handleChangeCurrency }
           />
         </Wrapper>
 
