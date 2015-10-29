@@ -1,3 +1,4 @@
+
 # React Redux Skeleton
 
 This project uses [react](https://github.com/facebook/react), [redux](https://github.com/rackt/redux) and [redux-router](https://github.com/rackt/redux-router) as it's basis and forms a skeleton around these tools to allow you to get your app started quickly and easily.
@@ -46,6 +47,16 @@ Generic components and containers that you are likely to reuse across multiple r
 Many routes will have components that are specific to them and will likely all have their own container. These should be kept in `routes/my-route/`.
 
 
+## State
+
+Your app's store is configured in `config/store.js`.
+
+
+## Modules: actions, reducers and dispatching
+
+Modules are stored in `modules/`.
+
+
 ## Routes
 
 Your app's routes are defined in `config/routes.js`.
@@ -55,14 +66,14 @@ Your app's routes are defined in `config/routes.js`.
 
 Webpack is configured to allow you to import your local files via aliases instead of long references to relative paths such as `../../../`.
 
-| Alias        | Directory           | Example                                     |
-|--------------|---------------------|---------------------------------------------|
-| `modules`    | `modules/`          | `import example from 'modules/example';`    |
-| `components` | `shared/components` | `import example from 'components/example';` |
-| `containers` | `shared/containers` | `import example from 'containers/example';` |
-| `styles`     | `assets/styles`     | `@import '~styles/mixins/example';`         |
-| `images`     | `assets/images`     | `import logo from 'images/logo.png';`       |
-| `fonts`      | `assets/fonts`      | `src: url('fonts/comic-sans.woff');`        |
+| Alias | Directory | Example |
+|-------|-----------|---------|
+| modules | modules/ | `import example from 'modules/example';` |
+| components | shared/components | `import example from 'components/example';` |
+| containers | shared/containers | `import example from 'containers/example';` |
+| styles     | assets/styles     | `@import '~styles/mixins/example';` |
+| images     | assets/images     | `import logo from 'images/logo.png';` |
+| fonts      | assets/fonts      | `src: url('fonts/comic-sans.woff');` |
 
 
 ## Tools
