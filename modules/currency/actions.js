@@ -47,8 +47,6 @@ export function fetchRates(currencies) {
 function shouldFetchRates(state, currencies) {
   const rates = state.currency.rates;
 
-  console.log(rates);
-
   if (rates.items.size === 0) {
     return true;
   }
