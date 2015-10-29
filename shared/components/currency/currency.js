@@ -28,10 +28,10 @@ export class Currency extends Component {
         {rates.items.size > 0 && (
           <span>
             in
-            <select onChange={ onChangeCurrency }>
+            <select onChange={ onChangeCurrency } value={ currency }>
               <option value=''>---</option>
               {[...rates.items.keys()].map(rateCurrency =>
-                <option value={ rateCurrency } selected={ currency === rateCurrency }>
+                <option value={ rateCurrency }>
                   { rateCurrency }
                 </option>
               )}
