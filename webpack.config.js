@@ -41,7 +41,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel?stage=0',
+        loader: 'babel?stage=0', // enable ES7 experimental features
         include: __dirname
       },
       {
@@ -52,7 +52,6 @@ module.exports = {
           'sass'
         ],
         include: [
-          path.join(__dirname, 'styles'),
           path.join(__dirname, 'routes'),
           path.join(__dirname, 'shared')
         ]

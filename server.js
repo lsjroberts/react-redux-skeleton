@@ -7,7 +7,10 @@ var app = new require('express')();
 var port = 8080;
 
 var compiler = webpack(config);
-app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }));
+app.use(webpackDevMiddleware(compiler, {
+  noInfo: true,
+  publicPath: config.output.publicPath
+}));
 app.use(webpackHotMiddleware(compiler));
 
 app.use(function(req, res) {
@@ -18,6 +21,6 @@ app.listen(port, function(error) {
   if (error) {
     console.error(error);
   } else {
-    console.info('==> 🌍  Listening on port %s. Open up http://localhost:%s/ in your browser.', port, port);
+    console.info('==> 🌍  Open up http://localhost:%s/ in your browser.', port);
   }
 });
