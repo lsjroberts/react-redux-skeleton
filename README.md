@@ -25,11 +25,15 @@ The skeleton comes with some examples of routing and components:
 1. Counter (demonstrating basic redux usage)
 2. Current converter (more complex data and asynchronous actions with an API middleware)
 
+If you wish to have an entirely clean setup, checkout the `clean` branch.
+
+<!--
 To clean out these examples and start from scratch run:
 
 ```
 $ ./bin/clean
 ```
+-->
 
 
 ## Components & Containers
@@ -75,6 +79,7 @@ Webpack is configured to allow you to import your local files via aliases instea
 | images     | assets/images     | `import logo from 'images/logo.png';` |
 | fonts      | assets/fonts      | `src: url('fonts/comic-sans.woff');` |
 
+<!--
 
 ## Tools
 
@@ -136,3 +141,5 @@ $ ./bin/component my-route-container --route=my-route
 ```
 
 This will create a new container at `routes/my-route/containers/my-route-container`.
+
+-->

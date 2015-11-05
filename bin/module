@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+var inquirer = require('inquirer');
+
+var questions = [
+  {
+    type: 'input',
+    name: 'module',
+    message: 'What is the name of your module?',
+    default: 'my module'
+  },
+  {
+    type: 'input',
+    name: 'actions',
+    message: 'What actions will you module allow?',
+    default: 'request, receive, fetch, fetch if required'
+  }
+];
+
+inquirer.prompt(questions, function (answers) {
+  console.log(answers);
+});
