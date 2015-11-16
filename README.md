@@ -8,7 +8,7 @@ This skeleton is suitable for both small and larger apps with multiple routes an
 Install with:
 
 ```
-$ npm i --dev
+$ npm i
 ```
 
 Run the local server with:
