@@ -8,7 +8,7 @@ export class Currency extends Component {
     const { amount, currency, rates } = state;
 
     return (
-      <div>
+      <div className={ styles.default }>
         <input
           onChange={ onChangeAmount }
           type='text'

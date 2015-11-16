@@ -1,15 +1,16 @@
 .wrapper {
   max-width: 30rem;
-  margin: 2rem;
+  margin: 2rem 0;
   padding: 2rem;
-  border-left: 4px solid #2a2f3a;
-}
+  border-left: 1px solid #ff0084;
 
-h2 {
-  margin: 0 0 1rem;
-  font-weight: 100;
-}
+  h2 {
+    margin: 0 0 1rem;
+    font-weight: 100;
+  }
 
-p {
-  line-height: 1.4;
+  p {
+    line-height: 1.4;
+  }
+
 }
