@@ -5,6 +5,8 @@ This project uses [react](https://github.com/facebook/react), [redux](https://gi
 
 This skeleton is suitable for both small and larger apps with multiple routes and numerous components and connecting to APIs.
 
+It is based on https://medium.com/lexical-labs-engineering/redux-best-practices-64d59775802e, thanks to Will Becker for those pointers.
+
 Install with:
 
 ```
