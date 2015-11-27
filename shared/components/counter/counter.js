@@ -4,11 +4,13 @@ import styles from './counter.scss';
 
 export class Counter extends Component {
   render() {
+    const { count, onIncrement, onDecrement } = this.props;
+
     return (
       <div className={ styles.default }>
-        <button onClick={this.props.decrement}>-</button>
-        { this.props.count }
-        <button onClick={this.props.increment}>+</button>
+        <button onClick={ onDecrement }>-</button>
+        { count }
+        <button onClick={ onIncrement }>+</button>
       </div>
     );
   }

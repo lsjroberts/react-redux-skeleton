@@ -10,7 +10,7 @@ export class Currency extends Component {
     return (
       <div className={ styles.default }>
         <input
-          onChange={ onChangeAmount }
+          onChange={ (e) => onChangeAmount(e.target.value) }
           type='text'
           value={ amount }
         />
@@ -28,7 +28,7 @@ export class Currency extends Component {
         {rates.items.size > 0 && (
           <span>
             in
-            <select onChange={ onChangeCurrency } value={ currency }>
+            <select onChange={ (e) => onChangeCurrency(e.target.value) } value={ currency }>
               <option value=''>---</option>
               {[...rates.items.keys()].map(rateCurrency =>
                 <option value={ rateCurrency }>
